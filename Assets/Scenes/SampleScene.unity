@@ -352,8 +352,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 84926543}
   rb: {fileID: 0}
-  turnSpeed: 5
-  moveSpeed: 5
+  turnSpeed: 2.2
+  moveSpeed: 2.64
 --- !u!195 &352856627
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -814,7 +814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3473991036066964492, guid: 125147468c4cba44ba54c7c2e3ec8822, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.359
+      value: -1.883
       objectReference: {fileID: 0}
     - target: {fileID: 3473991036066964492, guid: 125147468c4cba44ba54c7c2e3ec8822, type: 3}
       propertyPath: m_LocalRotation.w
@@ -988,7 +988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3473991036066964492, guid: 125147468c4cba44ba54c7c2e3ec8822, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.359
+      value: -1.883
       objectReference: {fileID: 0}
     - target: {fileID: 3473991036066964492, guid: 125147468c4cba44ba54c7c2e3ec8822, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1378,7 +1378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3473991036066964492, guid: 125147468c4cba44ba54c7c2e3ec8822, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.359
+      value: -1.883
       objectReference: {fileID: 0}
     - target: {fileID: 3473991036066964492, guid: 125147468c4cba44ba54c7c2e3ec8822, type: 3}
       propertyPath: m_LocalRotation.w
