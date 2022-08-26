@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4681abb1579a87d4ca46923c098ddece, type: 3}
   m_Name: Ball in Ground
   m_EditorClassIdentifier: 
+  active: 1
   Description: Find Ball, and Get if the Ball was not picked. If it was on the Ground
   DecisionID:
     UseConstant: 1
@@ -69,6 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00a63bfc37e3794ea3b0af5a3c6381e, type: 3}
   m_Name: Look For Ball
   m_EditorClassIdentifier: 
+  active: 1
   Description: Look for Ball No Obstacle
   DecisionID:
     UseConstant: 1
@@ -81,6 +83,7 @@ MonoBehaviour:
     Variable: {fileID: 0}
   WaitForAllTasks: 0
   waitForTask: -1
+  LookMultiplier: 0.9
   LookRange:
     UseConstant: 1
     ConstantValue: 0
@@ -120,6 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b74a9381c853d664c87e919a6ed0253e, type: 3}
   m_Name: Ball was NOT Picked
   m_EditorClassIdentifier: 
+  active: 1
   Description: "Check is the ball  is Picked \nPicked -> True\nDropped/On The Ground
     -> False"
   DecisionID:
@@ -168,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00a63bfc37e3794ea3b0af5a3c6381e, type: 3}
   m_Name: Look For Player
   m_EditorClassIdentifier: 
+  active: 1
   Description: Look for Player No Obstacle
   DecisionID:
     UseConstant: 1
@@ -180,6 +185,7 @@ MonoBehaviour:
     Variable: {fileID: 0}
   WaitForAllTasks: 0
   waitForTask: -1
+  LookMultiplier: 0.9
   LookRange:
     UseConstant: 1
     ConstantValue: 0
