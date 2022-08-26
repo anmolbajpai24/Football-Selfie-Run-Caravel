@@ -18,6 +18,7 @@ public class InputHandler : MonoBehaviour
     {
         if (guester == false)
         {
+            Vector2 newdirection = new Vector2(joystick.Direction.x, joystick.Direction.y * 0.5f);
             playerMover.SetInputVector(joystick.Direction);
             
         }

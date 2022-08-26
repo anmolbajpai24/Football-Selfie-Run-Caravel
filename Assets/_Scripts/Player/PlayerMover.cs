@@ -72,11 +72,14 @@ namespace Player
 
         private void Update() => HandleMovement();
 
-
+        private float targetTargetAngle = 0;
         private void HandleRotation(Vector3 lookAt)
         {
             float targetAngle = Mathf.Atan2(lookAt.x, lookAt.z) * Mathf.Rad2Deg;
-            transform.DORotate(new Vector3(0, targetAngle, 0), 0.5f);
+            if (lookAt != Vector3.zero) targetTargetAngle = Mathf.MoveTowardsAngle(targetTargetAngle, targetAngle, 0.5f);
+            Debug.Log(targetAngle);
+            Debug.Log(targetTargetAngle);
+            transform.DORotate(new Vector3(0, targetTargetAngle, 0), 0.5f);
         }
 
         private void HandleMovement()
@@ -115,10 +118,11 @@ namespace Player
 
                 _moveDirection = new Vector3(_moveInput.x, 0, _moveInput.y);
                 _moveDirection = _moveDirection.normalized;
-                _moveDirection *= (moveSpeed + moveSpeedBuffCombo + moveSpeedBuffPadle);
+                _moveDirection = new Vector2(_moveDirection.x*0.001f, _moveDirection.y*0.001f);
+                //_moveDirection *= (moveSpeed + moveSpeedBuffCombo + moveSpeedBuffPadle);
                 _moveDirection += transform.forward;
 
-                HandleRotation(new Vector3(_moveInput.x, 0, _moveInput.y));
+                HandleRotation(new Vector3(_moveInput.x*0.001f, 0, _moveInput.y*0.001f));
             }
 
             controller.SimpleMove(_moveDirection);
