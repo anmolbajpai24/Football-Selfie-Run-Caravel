@@ -78,8 +78,8 @@ namespace Player
             float targetAngle = Mathf.Atan2(lookAt.x, lookAt.z) * Mathf.Rad2Deg;
             if (lookAt != Vector3.zero) targetTargetAngle = Mathf.MoveTowardsAngle(targetTargetAngle, targetAngle, 0.5f);
             Debug.Log(targetAngle);
-            Debug.Log(targetTargetAngle);
-            transform.DORotate(new Vector3(0, targetTargetAngle, 0), 0.5f);
+            Debug.Log(targetAngle);
+            transform.DORotate(new Vector3(0, targetAngle, 0), 0.5f);
         }
 
         private void HandleMovement()
