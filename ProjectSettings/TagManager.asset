@@ -9,6 +9,7 @@ TagManager:
   - Fly
   - Climb
   - Stair
+  - Celebrity
   layers:
   - Default
   - TransparentFX
