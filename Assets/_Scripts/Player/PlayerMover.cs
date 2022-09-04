@@ -94,15 +94,28 @@ namespace Player
                     //AudioManager.instance.FootStepStartAndStope(false);
                     //_playerAnimationController.DoSetAnimationState(AllPlayerAnimationState.IdleAnimationState);
                     return;
+
+                    
+                }
+
+                else
+                {
+                    Vector3 transformForward = transform.forward;
+                    _moveDirection = transformForward;
+                    _moveDirection *= moveSpeed;
+                    _moveDirection += transformForward;
+
+                   // _moveDirection 
+
+                    controller.SimpleMove(_moveDirection);
+
+
                 }
 
 
                 //AudioManager.instance.FootStepStartAndStope(true);
                 //_playerAnimationController.DoSetAnimationState(AllPlayerAnimationState.RunAnimationState);
-                Vector3 transformForward = transform.forward;
-                _moveDirection = transformForward;
-                _moveDirection *= moveSpeed;
-                _moveDirection += transformForward;
+                
             }
             else
             {
@@ -121,11 +134,14 @@ namespace Player
                 _moveDirection = new Vector2(_moveDirection.x*0.001f, _moveDirection.y*0.001f);
                 //_moveDirection *= (moveSpeed + moveSpeedBuffCombo + moveSpeedBuffPadle);
                 _moveDirection += transform.forward;
+                _moveDirection *= moveSpeed;
 
                 HandleRotation(new Vector3(_moveInput.x*0.001f, 0, _moveInput.y*0.001f));
+
+                controller.SimpleMove(_moveDirection);
             }
 
-            controller.SimpleMove(_moveDirection);
+           // controller.SimpleMove(_moveDirection);
         }
     }
 }
